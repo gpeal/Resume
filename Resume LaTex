@@ -1,0 +1,89 @@
+\documentclass[11pt,oneside]{article}
+\usepackage{geometry}
+\usepackage[absolute]{textpos}
+\usepackage{fontspec}
+\usepackage{rotating}
+
+\setmainfont[Mapping=text-tex]{Calibri}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=0.5in,bmargin=0.5in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in,footskip=.3in}
+
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\Large\textbf{#1}}
+	\begin{itemize}
+	\vspace{3pt}
+}{
+	\end{itemize}
+}
+
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-2pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+\newenvironment{reslist}[1]{
+	\resitem{{\fontsize{16}{18}\selectfont \textbf{Gabriel Peal}}}
+	\vspace{-5pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+\newcommand{\resitem}[1]{
+	\vspace{-4pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+\newcommand{\ressubitem}[1]{
+	\vspace{-1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
+
+\begin{document}
+	\begin{textblock}{20}(1.5,0.8)
+		{\fontsize{42}{46}\selectfont \textbf{Gabriel Peal}}
+	\end{textblock}
+	
+	\begin{textblock}{20}(9,0.5)
+		\begin{tabular}{l}
+			1945 Sherman Avenue\\
+			Evan	ston, IL 60201\\
+			(240) 277-5247\\
+			gabriel@gpeal.com
+		\end{tabular}
+	\end{textblock}
+	
+	\begin{textblock}{20}(13,0.5)
+		\begin{sideways}{\fontsize{19}{16}\selectfont Github}\end{sideways}
+		\includegraphics[scale=0.19]{github_qr.png}
+	\end{textblock}
+	
+	 \rule[-11ex]{1\textwidth}{1.2pt}
+	 
+	 \vspace{7 mm}
+	 
+	 \begin{ressection}{Education}
+
+	\begin{ressubsec}{Brigham Young University}{Provo, UT}{Majoring in Computer Science and in Mathematics}
+			\ressubitem{GPA: 3.77 (overall), 3.77 (CS major), 3.90 (Math major)}
+			\ressubitem{Projected Graduation Date: May, 2006}
+		\end{ressubsec}
+
+	\end{ressection}
+
+	
+\end{document}
