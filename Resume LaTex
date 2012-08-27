@@ -7,58 +7,56 @@
 \setmainfont[Mapping=text-tex]{Calibri}
 
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=0.5in,bmargin=0.5in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in,footskip=.3in}
+\geometry{letterpaper,tmargin=0.5in,bmargin=0.5in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in}
+%\setlength{\parindent}{2.56 mm} %2.56
+\usepackage[parfill]{parskip}
 
-\newenvironment{ressection}[1]{
-	\vspace{4pt}
-	{\Large\textbf{#1}}
+\newenvironment{sectionh1}[1]{
+	{\fontsize{16}{18}\selectfont \textbf{#1}}\\
+	\vspace{-6 mm}
+}{
+	\vspace{4 mm}
+}
+\newenvironment{sectionh2}[4]{
+	{\noindent\trivlist\item\ignorespaces}%
+	{\fontsize{11}{13}\selectfont \textbf{#1}} 
+	{\fontsize{11}{13}\selectfont #2} 
+	\ifthenelse{\equal{#3}{}}
+   		 {}
+    		{\fontsize{8}{10}\selectfont (#3) \normalsize}
+	\hfill
+	\ifthenelse{\equal{#4}{}}
+   		 {\\}
+    		{(#4)}\\
 	\begin{itemize}
-	\vspace{3pt}
+	\vspace{-6 mm}
 }{
 	\end{itemize}
+	\vspace{2 mm}
 }
 
-\newenvironment{ressubsec}[3]{
-	\resbigitem{#1}{#2}{#3}
-	\vspace{-2pt}
-	\begin{itemize}
-}{
-	\end{itemize}
-}
+\newenvironment{classes}[1]{
+	{\noindent\trivlist\item\ignorespaces}%
+	{\fontsize{11}{13}\selectfont #1} 
+	}{}
 
-\newenvironment{reslist}[1]{
-	\resitem{{\fontsize{16}{18}\selectfont \textbf{Gabriel Peal}}}
-	\vspace{-5pt}
-	\begin{itemize}
-}{
-	\end{itemize}
-}
-
-\newcommand{\resitem}[1]{
-	\vspace{-4pt}
-	\item \begin{flushleft} #1 \end{flushleft}
-}
-
-\newcommand{\ressubitem}[1]{
-	\vspace{-1pt}
-	\item \begin{flushleft} #1 \end{flushleft}
-}
-
-\newcommand{\resbigitem}[3]{
-	\vspace{-5pt}
-	\item
-	\textbf{#1}---#2 \\
-	\textit{#3}
+\newcommand{\resitem}[2]{
+	\item #1 \hfill
+	\ifthenelse{\equal{#2}{}}
+   		 {}
+    		{(#2)}
+	\vspace{-2 mm}
 }
 
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------%
 
 \begin{document}
-	\begin{textblock}{20}(1.5,0.8)
+
+	\begin{textblock}{20}(1.5,0.5)
 		{\fontsize{42}{46}\selectfont \textbf{Gabriel Peal}}
 	\end{textblock}
 	
-	\begin{textblock}{20}(9,0.5)
+	\begin{textblock}{20}(9,0.2)
 		\begin{tabular}{l}
 			1945 Sherman Avenue\\
 			Evan	ston, IL 60201\\
@@ -67,23 +65,79 @@
 		\end{tabular}
 	\end{textblock}
 	
-	\begin{textblock}{20}(13,0.5)
+	\begin{textblock}{20}(13,0.2)
 		\begin{sideways}{\fontsize{19}{16}\selectfont Github}\end{sideways}
 		\includegraphics[scale=0.19]{github_qr.png}
 	\end{textblock}
 	
-	 \rule[-11ex]{1\textwidth}{1.2pt}
+	 \rule[-6ex]{1\textwidth}{1.2pt}
 	 
-	 \vspace{7 mm}
+	 \vspace{5 mm}
 	 
-	 \begin{ressection}{Education}
-
-	\begin{ressubsec}{Brigham Young University}{Provo, UT}{Majoring in Computer Science and in Mathematics}
-			\ressubitem{GPA: 3.77 (overall), 3.77 (CS major), 3.90 (Math major)}
-			\ressubitem{Projected Graduation Date: May, 2006}
-		\end{ressubsec}
-
-	\end{ressection}
-
+	 \begin{sectionh1}{EDUCATION}
+		\begin{sectionh2}{Northwestern University}{}{}{2009-2013}
+				\resitem{McCormick School of Engineering and Applied Science (GPA: 3.71 / 4.0 through Spring 2012)}{}
+		\end{sectionh2}
+	\end{sectionh1}
 	
+	\begin{sectionh1}{RELEVANT COURSES}
+		\begin{classes}{Data Structures and Algorithms, C++ Programming, Java Programming, Computer Systems, Differential Equations,\\Multivariable and Vector Calculus, Linear Algebra, Probabilistic Systems}
+		\end{classes}
+	\end{sectionh1}
+	
+	\begin{sectionh1}{EXPERIENCE}
+		\begin{sectionh2}{Google}{Software Engineering Intern}{Cambridge, MA}{June \textendash\ September 2012}
+			\resitem{Submitted a patch to the WebKit trunk to modularize the inspector (changeset 126215)}{}
+			\resitem{Refactored the WebPagetest Node.js agent for increased security and stability}{}
+			\resitem{Increased test coverage of the WebPagetest Node.js agent}{}
+		\end{sectionh2}
+		
+		\begin{sectionh2}{Stagecoach}{Co-Founder}{Evanston, IL}{December 2011 \textendash\ June 2012}
+			\resitem{Developed a career management platform for the film industry}{}
+		\end{sectionh2}
+		
+		\begin{sectionh2}{Northwestern Interactive Audio Lab}{Software Engineering Intern}{Evanston, IL}{June \textendash\ September 2012}
+			\resitem{Helped develop Tunebot, a vocal search engine that can identify songs you sing}{}
+			\resitem{Developed a method of reducing noise in audio that improved Tunebot search results}{}
+		\end{sectionh2}
+		
+		\begin{sectionh2}{General Motors}{Engineering Intern}{Warren, MI}{June \textendash\ September 2011}
+			\resitem{Won an intellectual property award}{}
+			\resitem{Designed hardware and wrote software in C to run diagnostics on the Chevy Volt resulting in a \\potential annual savings of over \$ 1,000,000}{}
+			\resitem{Automated numerous diagnostic tests using C programs which will save hundreds of hours of manual labor}{}
+		\end{sectionh2}
+		
+		\begin{sectionh2}{XFI Corporation}{Software Engineering Intern}{Bethesda, MD}{June \textendash\ September 2010}
+			\resitem{Developed MATLAB tools to aid data creation in SalesHawk, a comprehensive sales software suite used at Fortune 100 companies}{}
+			\resitem{Ran rigorous software regression tests on current and future versions of SalesHawk}{}
+			\resitem{Proposed improvements to Saleshawk’s fuzzy logic engine }{}
+		\end{sectionh2}
+		
+		\begin{sectionh2}{National Institutes of Health}{Intern}{Bethesda, MD}{September 2008 \textendash\ August 2009}
+			\resitem{Developed algorithms to normalize and analyze 3D confocal images of Drosophila melanogaster (fruit flies)}{}
+		\end{sectionh2}
+	\end{sectionh1}
+	
+	\begin{sectionh1}{SKILLS AND PROJECTS}
+		\begin{itemize}
+			\resitem{Proficiency in C, C++, C\#, Java, JavaScript, Ruby, Python, MATLAB, and Silverlight/XAML}{}
+			\resitem{Ruby on Rails}{}
+			\resitem{Node.js}{}
+			\resitem{Visual Studio}{}
+			\resitem{Windows Phone 7 Development}{}
+			\resitem{Designed a glove to increase the dexterity of stroke survivors}{2010}
+			\resitem{Designed an underwater communication device for deaf scuba divers}{2009}
+		\end{itemize}
+	\end{sectionh1}
+	
+	\begin{sectionh1}{AWARDS, CERTIFICATION, AND RECOGNITION}
+		\begin{itemize}
+			\resitem{First Place \textendash\ Connected World Conference 36 Hour Hackathon}{2012}
+			\resitem{Illinois Technology Association Fall Programming Challenge \textendash\ Top 3\%}{2011}
+			\resitem{Outstanding Engineering Design Award, Maryland Space Business Roundtable (MSBR)}{2009}
+			\resitem{AP Scholar with Distinction }{2009}
+			\resitem{Competed in the High School Programming Contest, University of Maryland}{2008}
+		\end{itemize}
+	\end{sectionh1}
+	\vspace{-15mm}
 \end{document}
