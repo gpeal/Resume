@@ -7,7 +7,7 @@
 \setmainfont[Mapping=text-tex]{Calibri}
 
 \pagestyle{empty}
-\geometry{letterpaper,tmargin=0.5in,bmargin=0.5in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in}
+\geometry{letterpaper,tmargin=0.5in,bmargin=0.0in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in}
 %\setlength{\parindent}{2.56 mm} %2.56
 \usepackage[parfill]{parskip}
 
@@ -19,7 +19,7 @@
 }
 \newenvironment{sectionh2}[4]{
 	{\noindent\trivlist\item\ignorespaces}%
-	{\fontsize{11}{13}\selectfont \textbf{#1}} 
+	{\fontsize{11}{13}\selectfont \textbf{#1}}
 	{\fontsize{11}{13}\selectfont #2} 
 	\ifthenelse{\equal{#3}{}}
    		 {}
@@ -52,31 +52,32 @@
 
 \begin{document}
 
-	\begin{textblock}{20}(1.5,0.5)
-		{\fontsize{42}{46}\selectfont \textbf{Gabriel Peal}}
+	\begin{textblock}{20}(1.5,0.55)
+		{\fontsize{48}{50}\selectfont \textbf{Gabriel Peal}}
 	\end{textblock}
 	
 	\begin{textblock}{20}(9,0.2)
 		\begin{tabular}{l}
 			1945 Sherman Avenue\\
-			Evan	ston, IL 60201\\
+			Evanston, IL 60201\\
 			(240) 277-5247\\
+			github.com/gpeal\\
 			gabriel@gpeal.com
 		\end{tabular}
 	\end{textblock}
 	
 	\begin{textblock}{20}(13,0.2)
-		\begin{sideways}{\fontsize{19}{16}\selectfont Github}\end{sideways}
-		\includegraphics[scale=0.19]{github_qr.png}
+		\begin{sideways}{\fontsize{19}{16}\selectfont LinkedIn}\end{sideways}
+		\includegraphics[scale=0.27]{linkedin_qr.png}
 	\end{textblock}
 	
-	 \rule[-6ex]{1\textwidth}{1.2pt}
+	 \rule[-8.8ex]{1\textwidth}{1.2pt}
 	 
 	 \vspace{5 mm}
 	 
 	 \begin{sectionh1}{EDUCATION}
 		\begin{sectionh2}{Northwestern University}{}{}{2009-2013}
-				\resitem{McCormick School of Engineering and Applied Science (GPA: 3.71 / 4.0 through Spring 2012)}{}
+				\resitem{McCormick School of Engineering and Applied Science (3.71 GPA)}{}
 		\end{sectionh2}
 	\end{sectionh1}
 	
@@ -103,14 +104,14 @@
 		
 		\begin{sectionh2}{General Motors}{Engineering Intern}{Warren, MI}{June \textendash\ September 2011}
 			\resitem{Won an intellectual property award}{}
-			\resitem{Designed hardware and wrote software in C to run diagnostics on the Chevy Volt resulting in a \\potential annual savings of over \$ 1,000,000}{}
+			\resitem{Designed hardware and wrote software in C to run diagnostics on the Chevy Volt resulting in a \\potential annual savings of over \$1,000,000}{}
 			\resitem{Automated numerous diagnostic tests using C programs which will save hundreds of hours of manual labor}{}
 		\end{sectionh2}
 		
 		\begin{sectionh2}{XFI Corporation}{Software Engineering Intern}{Bethesda, MD}{June \textendash\ September 2010}
-			\resitem{Developed MATLAB tools to aid data creation in SalesHawk, a comprehensive sales software suite used at Fortune 100 companies}{}
+			\resitem{Developed MATLAB tools to aid data creation in SalesHawk, a comprehensive sales software\\ suite used at Fortune 100 companies}{}
 			\resitem{Ran rigorous software regression tests on current and future versions of SalesHawk}{}
-			\resitem{Proposed improvements to Saleshawk’s fuzzy logic engine }{}
+			\resitem{Proposed improvements to Saleshawk's fuzzy logic engine }{}
 		\end{sectionh2}
 		
 		\begin{sectionh2}{National Institutes of Health}{Intern}{Bethesda, MD}{September 2008 \textendash\ August 2009}
