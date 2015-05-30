@@ -4,7 +4,7 @@
 \usepackage{fontspec}
 \usepackage{rotating}
 
-\setmainfont[Mapping=text-tex]{Calibri}
+\setmainfont[Mapping=text-tex]{Helvetica Neue Light}
 
 \pagestyle{empty}
 \geometry{letterpaper,tmargin=0.5in,bmargin=0.0in,lmargin=0.5in,rmargin=0.5in,headheight=0in,headsep=0in}
@@ -13,9 +13,9 @@
 
 \newenvironment{sectionh1}[1]{
 	{\fontsize{16}{18}\selectfont \textbf{#1}}\\
-	\vspace{-6 mm}
+	\vspace{-5 mm}
 }{
-	\vspace{4 mm}
+	\vspace{2 mm}
 }
 \newenvironment{sectionh2}[4]{
 	{\noindent\trivlist\item\ignorespaces}%
@@ -52,49 +52,49 @@
 
 \begin{document}
 
-	\begin{textblock}{20}(1.5,0.55)
+	\begin{textblock}{20}(1.3,0.8)
 		{\fontsize{48}{50}\selectfont \textbf{Gabriel Peal}}
 	\end{textblock}
 	
-	\begin{textblock}{20}(9,0.2)
+	\begin{textblock}{20}(9.2,0.45)
 		\begin{tabular}{l}
-			1945 Sherman Avenue\\
-			Evanston, IL 60201\\
+			1074 Florida St\\
+			San Francisco, CA\\
 			(240) 277-5247\\
 			github.com/gpeal\\
 			gabriel@gpeal.com
 		\end{tabular}
 	\end{textblock}
 	
-	\begin{textblock}{20}(13,0.2)
-		\begin{sideways}{\fontsize{19}{16}\selectfont LinkedIn}\end{sideways}
-		\includegraphics[scale=0.27]{linkedin_qr.png}
+	\begin{textblock}{20}(12.6,0.37)
+		\begin{sideways}{\fontsize{24}{16}\selectfont GitHub}\end{sideways}
+		\includegraphics[scale=0.27]{github_qr.png}
 	\end{textblock}
 	
-	 \rule[-8.8ex]{1\textwidth}{1.2pt}
+	 \rule[-10.8ex]{1\textwidth}{1.2pt}
 	 
-	 \vspace{5 mm}
-	 
-	 \begin{sectionh1}{EDUCATION}
-		\begin{sectionh2}{Northwestern University}{}{}{2009-2013}
-				\resitem{McCormick School of Engineering and Applied Science (3.71 GPA)}{}
-		\end{sectionh2}
-	\end{sectionh1}
-	
-	\begin{sectionh1}{RELEVANT COURSES}
-		\begin{classes}{Data Structures and Algorithms, C++ Programming, Java Programming, Computer Systems, Differential Equations,\\Multivariable and Vector Calculus, Linear Algebra, Probabilistic Systems}
-		\end{classes}
-	\end{sectionh1}
+	 \vspace{4 mm}
 	
 	\begin{sectionh1}{EXPERIENCE}
+		\begin{sectionh2}{Google}{Software Engineer}{Mountain View, CA}{July 2013 \textendash\ Present}
+			\resitem{Developed Android Auto from conception to dealer showrooms from 35 automakers}{}
+			\resitem{Largest contributor to Android Auto codebase}{}
+			\resitem{Led Google Now, media, phone, and system UI teams on Android Auto}{}
+			\resitem{Delivered talk about Android Auto SDKs at Google I/O 2014 (Android Auto: Developers, Start Your Engines)}{}
+			\resitem{Collaborated with design teams to create and implement new interface paradigms designed for driving}{}
+			\resitem{Designed and developed MediaSession/MediaBrowserService APIs added in Android API 21}{}
+		\end{sectionh2}
+		\begin{sectionh2}{Walkby}{Software Engineer}{Chicago, IL}{December 2012 \textendash\ May 2013}
+			\resitem{Developed a boutique clothing website built with Rails and AngularJS}{}
+		\end{sectionh2}
 		\begin{sectionh2}{Google}{Software Engineering Intern}{Cambridge, MA}{June \textendash\ September 2012}
-			\resitem{Submitted a patch to the WebKit trunk to modularize the inspector (changeset 126215)}{}
+			\resitem{Submitted a patch to the WebKit trunk to modularize the inspector}{}
 			\resitem{Refactored the WebPagetest Node.js agent for increased security and stability}{}
 			\resitem{Increased test coverage of the WebPagetest Node.js agent}{}
 		\end{sectionh2}
 		
 		\begin{sectionh2}{Stagecoach}{Co-Founder}{Evanston, IL}{December 2011 \textendash\ June 2012}
-			\resitem{Developed a career management platform for the film industry}{}
+			\resitem{Developed a Ruby on Rails based career management platform for the film industry}{}
 		\end{sectionh2}
 		
 		\begin{sectionh2}{Northwestern Interactive Audio Lab}{Software Engineering Intern}{Evanston, IL}{June \textendash\ September 2012}
@@ -109,35 +109,33 @@
 		\end{sectionh2}
 		
 		\begin{sectionh2}{XFI Corporation}{Software Engineering Intern}{Bethesda, MD}{June \textendash\ September 2010}
-			\resitem{Developed MATLAB tools to aid data creation in SalesHawk, a comprehensive sales software\\ suite used at Fortune 100 companies}{}
+			\resitem{Developed tools to aid data creation in SalesHawk, a comprehensive sales software\\ suite used at Fortune 100 companies}{}
 			\resitem{Ran rigorous software regression tests on current and future versions of SalesHawk}{}
-			\resitem{Proposed improvements to Saleshawk's fuzzy logic engine }{}
 		\end{sectionh2}
 		
-		\begin{sectionh2}{National Institutes of Health}{Intern}{Bethesda, MD}{September 2008 \textendash\ August 2009}
-			\resitem{Developed algorithms to normalize and analyze 3D confocal images of Drosophila melanogaster (fruit flies)}{}
+	\end{sectionh1}
+	
+	 \begin{sectionh1}{EDUCATION}
+		\begin{sectionh2}{Northwestern University \textendash\ McCormick School of Engineering and Applied Science}{}{}{2009-2013}
+				\resitem{B.S. Electrical Engineering \textendash\ Cum Laude (3.71 GPA)}{}
 		\end{sectionh2}
 	\end{sectionh1}
 	
-	\begin{sectionh1}{SKILLS AND PROJECTS}
+	\begin{sectionh1}{SKILLS}
 		\begin{itemize}
-			\resitem{Proficiency in C, C++, C\#, Java, JavaScript, Ruby, Python, MATLAB, and Silverlight/XAML}{}
-			\resitem{Ruby on Rails}{}
-			\resitem{Node.js}{}
-			\resitem{Visual Studio}{}
-			\resitem{Windows Phone 7 Development}{}
-			\resitem{Designed a glove to increase the dexterity of stroke survivors}{2010}
-			\resitem{Designed an underwater communication device for deaf scuba divers}{2009}
+			\resitem{Primary languages: Java, Ruby, JavaScript}{}
+			\resitem{Secondary languages: C, C++, C\#, Python, and MATLAB}{}
+			\resitem{Android, iOS, Ruby on Rails, Node.js, AngularJS, Windows Phone}{}
 		\end{itemize}
 	\end{sectionh1}
 	
-	\begin{sectionh1}{AWARDS, CERTIFICATION, AND RECOGNITION}
+	\begin{sectionh1}{AWARDS AND RECOGNITION}
 		\begin{itemize}
+			\resitem{Featured on Android Developers Backstage podcast episode 23}{2015}
+			\resitem{Third Place \textendash\ Northwestern robotics design competition}{2013}
 			\resitem{First Place \textendash\ Connected World Conference 36 Hour Hackathon}{2012}
 			\resitem{Illinois Technology Association Fall Programming Challenge \textendash\ Top 3\%}{2011}
 			\resitem{Outstanding Engineering Design Award, Maryland Space Business Roundtable (MSBR)}{2009}
-			\resitem{AP Scholar with Distinction }{2009}
-			\resitem{Competed in the High School Programming Contest, University of Maryland}{2008}
 		\end{itemize}
 	\end{sectionh1}
 	\vspace{-15mm}
